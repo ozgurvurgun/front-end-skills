@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Image</title>
+    <style>
+        img {
+            width: 500px;
+            height: 900px;
+            /*object-fit: contain; fotoğrafı bozmadan alanı komple kaplar*/
+            /* object-position: top; */
+            object-fit: cover; /* fotoğrafı alana tam sığdırır*/
+            /* object-position: left; fotoğrafın sol yanını gösterir fit cover ile beraber kullanılabilir */
+            border: 1px solid red;
+            border-radius: 200px;
+            padding: 5px;
+            /* resimi css ile background olarak çağırırsan
+               yukarıdaki object-position falan çalışmaz
+               background-position vs fonksiyonları kullanman 
+               gerekir
+            */
+        }
+
+        /* .img {}
+
+        #img {} */
+    </style>
+</head>
+
+<body>
+    <img class="my-image" id="my-mage" src="https://picsum.photos/id/255/200/300" alt="">
+</body>
+
+</html>
