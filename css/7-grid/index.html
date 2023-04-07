@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+
+<body>
+    <div class="kapsayici" style="
+        display: grid;
+        grid-template-columns: 100px 100px 100px 1fr;
+        ">
+        <div style="background-color: red;" class="kutu1">kutu1</div>
+        <div style="background-color: yellow;" class="kutu2">kutu2</div>
+        <div style="background-color: green;" class="kutu3">kutu3</div>
+        <div style="background-color: tomato;" class="kutu4">kutu4</div>
+    </div>
+
+
+    <!-- grid-template-columns: 100px 100px 100px 300px;  tek bir satırda 4 eleman var -->
+
+
+    <div class="kapsayici" style="
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr;
+    ">
+        <div style="background-color: red;" class="kutu1">kutu1</div>
+        <div style="background-color: yellow;" class="kutu2">kutu2</div>
+        <div style="background-color: green;" class="kutu3">kutu3</div>
+    </div>
+
+
+
+
+
+
+    <div class="kapsayici" style="
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* column-gap: 10px;
+    row-gap: 20px; */
+    gap: 28px;
+    ">
+        <div style="background-color: red;height: 200px;" class="kutu1">kutu1</div>
+        <div style="background-color: yellow;height: 200px;" class="kutu2">kutu2</div>
+        <div style="background-color: green;height: 200px;" class="kutu3">kutu3</div>
+        <div style="background-color: brown;height: 200px;" class="kutu4">kutu4</div>
+        <div style="background-color: cadetblue;height: 200px;" class="kutu5">kutu5</div>
+        <div style="background-color: darkgreen;height: 200px;" class="kutu6">kutu6</div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
