@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em rem</title>
+    <style>
+    html{
+        font-size: 16px;
+    }
+    .box-wrapper{
+        font-size: 30px;
+    }
+    .box{
+        font-size: 14px;
+    }
+    .box p{
+        font-size: 1.5em;
+        margin-top: 2em;
+    }
+    .box span{
+        font-size: 2rem;
+        margin-top: 2rem;
+        display: inline-block;
+    }
+    @media (max-width:768px){
+        html{
+            font-size: 10px;
+        }
+    }
+    </style>
+
+
+<!-- em şunu yapar. bir üst kapsayıcının font-size değeri 
+     kaç ise, o değeri em değeri ile çarpar. eğer bir üst 
+     kapsayıcıda font-size değeri yok ise, font-size değerine
+     ulaşana kadar üst kapsacıyıları baz alır. eğer font-size 
+     değeri hiçbir kapsayıcısda verilmemişse varsayılan değer 
+     olarak 16px alınır.
+
+
+     margin işleminde kendi içinde ki font-size değerine
+     bakılır ilk olarak.
+
+
+     peki bu em ne işe yarar? responsive dizayn yapacağımız zaman
+     bütün parçaların tek tek piksellerini değiştirmek 
+     zorunda kalmayacağız. parçların bağlı olduğu kapsayıcının
+     piksel depğerini değiştirdiğimizde içinde ki diğer 
+     child lar ona göre boyutlanacak
+-->
+
+<!-- rem referans font-size değeri için direkt 
+     html kapsayıcısını kullanır. em den farkı budur 
+-->
+</head>
+<body>
+    
+<div class="box-wrapper">
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>Lorem ipsum dolor sit amet.</span>
+        <span>Lorem ipsum dolor sit amet.</span>
+    </div>
+</div>
+
+
+    
+</body>
+</html>

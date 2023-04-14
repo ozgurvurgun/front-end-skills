@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animasyonlar</title>
+    <style>
+      /* transition start */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        display: flex;
+        /* align-items: center; */
+        height: 100vh;
+      }
+      .box {
+        /* width: 200px;
+        height: 200px;
+        background-color: red; */
+
+        /* transition-property: background-color, width;
+        transition-duration: 5s; */
+
+        /* transition-timing-function: ease-in;  */ /* yavaş başlar hızlı biter*/
+        /*transition-timing-function: ease-out;*/ /* hızlı başlar yavaş biter */
+        /*transition-timing-function: ease-in-out;*/ /* yavaş-hızlı-yavaş */
+        /* transition: background-color 2s, width 5s ease-in; */
+      }
+
+      /* .box:hover {
+        background-color: blue;
+        width: 600px;
+      } */
+
+      /* transition end */
+
+      /* transform start */
+      .box {
+        /* background-color: blue;
+        width: 200px;
+        height: 200px; */
+        /* border-top-right-radius: 30px; */
+        /* transition: 1s transform ease-in; */
+      }
+      .box:hover {
+        /* transform:rotate(3600deg); */
+        /* transform: skew(45deg);*/ /* kutuyu verilen dereceye göre eğer*/
+        /* transform: translate(100px); */
+        /* transform: translate(-100px); */
+        /* transform: translateX(-100px); */
+        /* transform: translateY(-100px); */
+        /* transform: scale(2); */
+      }
+      /* transform end */
+
+      /* css animation start */
+
+      .box {
+        /* background-color: red;
+        width: 200px;
+        height: 200px;
+        animation-name: box;
+        animation-duration: 5s; */
+        /*animation-iteration-count: 4;*/ /* animasyonun kaç kere tekrar edeceğini ayarlar */
+        /*animation-iteration-count: infinite;*/ /* animasyon sonsuza kadar tekrar eder */
+        /* animation-fill-mode: forwards;*/ /* animasyon bittiği yerde durur */
+        /* animation-delay: 2s;*/ /* sayfa yüklendikten sonra animasyonun ne zaman başlayacağını ayarlar */
+        /* animation-direction: alternate-reverse; */ /* animayonu tersten çalıştırır */
+        /*animation-timing-function: ease-in;*/ /* burası transition gibidir */
+        /* animation: box 5s forwards 2s ease-in-out; */
+      }
+      /* @keyframes box {
+        to {
+          width: 600px;
+        }
+      } */
+
+      /* css animation end */
+
+      /* css keyframes start */
+      .box {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        animation: box 5s ease-in;
+      }
+      @keyframes box {
+        from {
+          top: 0;
+          left: 0;
+        }
+        /* to {
+          width: 600px;
+          top: 200px;
+          left: 200px;
+        } */
+        25%{
+            top: 200px;
+            left: 0;
+        }
+        50%{
+            top: 200px;
+            left: 200px;
+        }
+        75%{
+             top: 400px;
+             left: 200px;
+        }
+        100%{
+             top: 400px;
+             left: 400;
+        }
+      }
+
+      button{
+        opacity: 0;
+        animation: button 3s ease-in;
+        position: 0;
+        top: 0;
+        left: 0;
+      }
+      @keyframes button{
+        to{
+            top: 100px;
+            left: 100px;
+            opacity: 1;
+            position: absolute;
+        }
+      }
+      /* css keyframes end */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button>TIKLA</button>
+    </div>
+  </body>
+</html>

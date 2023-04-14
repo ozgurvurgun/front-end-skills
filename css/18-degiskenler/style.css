@@ -1,0 +1,48 @@
+:root{
+    --primary-color:green;
+    --aqua-color:powderblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--aqua-color);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+} 
+
+section{
+    margin: 10px 20px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+section button{
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--aqua-color);
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 30px;
+}

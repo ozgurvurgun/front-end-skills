@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="TR-tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo css</title>
+
+    <style>
+        
+        .links a:link {
+            color: turquoise;
+        }
+
+        .links a:visited {
+            color: red;
+        }
+
+        .links a:hover {
+            color: blueviolet;
+        }
+
+        .links a:active {
+            color: burlywood;
+            /* active hoverin altında olmalı */
+        }
+
+        .show-button button {
+            display: none;
+        }
+
+        .show-button:hover {
+            color: red;
+        }
+
+        .show-button:hover button {
+            display: inline-block;
+        }
+
+        /***************************/
+
+        .pseudo-elemet p:last-child::first-letter {
+            font-size: 40px;
+            color: blueviolet;
+        }
+
+        .pseudo-elemet p::first-line{
+            background-color: aqua;
+        }
+
+        .pseudo-elemet p:last-child::after { /*after-before*/
+            content: ' SONA EKLENEN OGELER';
+        }
+         ::selection{
+            background-color: coral;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="links">
+        <a href="home.html">HOME</a>
+        <a href="product.html">PRODUCTS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+
+
+
+
+
+    <br />
+    <br />
+    <div class="show-button">
+        show button...
+        <br />
+        <button>CLICK</button>
+    </div>
+
+
+
+
+    <div class="pseudo-elemet">
+        <p>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+
+</body>
+
+</html>
